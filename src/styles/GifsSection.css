@@ -1,0 +1,36 @@
+
+section header {
+  margin: 0 !important;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+
+  h3 {
+    margin: 0;
+  }
+
+  button {
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    min-width: inherit;
+    place-content: center;
+    background-color: rgb(220, 84, 84);
+  }
+
+  button:hover {
+    background-color: rgb(222, 110, 110);
+  }
+}
+
+.img-grid {
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+}

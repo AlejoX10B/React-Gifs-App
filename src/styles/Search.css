@@ -1,0 +1,98 @@
+search.surface {
+  top: 1.25rem;
+  z-index: 10;
+  position: sticky;
+  backdrop-filter: blur(1.5rem);
+  background: rgba(225, 225, 225, 0.35);
+  transition: box-shadow 0.15s ease;
+  -webkit-backdrop-filter: blur(1.5rem);
+}
+
+search:hover {
+  box-shadow: 0 4px 30px rgb(165, 165, 211);
+}
+
+form {
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  align-content: center;
+  justify-content: stretch;
+}
+
+label {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label:first-of-type {
+  flex: 1;
+}
+
+input {
+  color: black;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(165, 165, 211);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+select {
+  color: black;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid rgb(165, 165, 211);
+  background-color: rgba(255, 255, 255, 0.9);
+
+  option {
+    color: black;
+  }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 120px;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  background-color: rgb(140, 105, 211);
+  transition: transform, background-color 0.095s ease;
+}
+
+button:hover {
+  background-color: rgb(150, 126, 199);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.controls {
+  gap: 2rem;
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+}
+
+@media (prefers-color-scheme: dark) {
+  input {
+    color: white;
+    background-color: rgb(54, 57, 58);
+  }
+
+  select {
+    color: white;
+    background-color: rgb(54, 57, 58);
+
+    option {
+      color: white;
+    }
+  }
+}
