@@ -10,8 +10,6 @@ export function GifsSection({ term, limit, removeSearch }) {
 
   const { gifs, isLoading } = useFetchGifs(term, limit)
 
-  console.log({ isLoading })
-
   return (
     <section className='surface'>
       <header>

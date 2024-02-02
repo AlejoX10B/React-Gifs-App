@@ -1,12 +1,27 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { GifsSection, Search } from './components'
 
 import './styles/App.css'
 
 
 export function App() {
+  const sectionsRef = useRef(null)
+
   const [history, setHistory] = useState([])
   const [gifsLimit, setGifsLimit] = useState(0)
+
+  useEffect(() => {
+    if (sectionsRef.current) {
+      const lastSearch = sectionsRef.current.lastElementChild
+
+      if (lastSearch) {
+        lastSearch.scrollIntoView({
+          block: 'center',
+          behavior: 'smooth'
+        })
+      }
+    }
+  }, [history])
 
   const updateHistory = ({ term, limit }) => {
     const normalizedHistory = history.map(item => item.toLowerCase())
@@ -29,7 +44,7 @@ export function App() {
 
       <Search onSearch={updateHistory} />
 
-      <article>
+      <article ref={sectionsRef}>
         {
           history.map(term => (
             <GifsSection
