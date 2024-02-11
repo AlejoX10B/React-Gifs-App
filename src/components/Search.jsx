@@ -23,7 +23,7 @@ export function Search({ onSearch }) {
 
   return (
     <search className='surface'>
-      <form onSubmit={handleOnSubmit}>
+      <form onSubmit={handleOnSubmit} role='form'>
 
         <label>
           Término de búsqueda:
@@ -42,6 +42,7 @@ export function Search({ onSearch }) {
           <select
             name='limit'
             title='limit'
+            role='listbox'
             value={selectValue}
             onChange={handleSelect}>
 

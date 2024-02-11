@@ -51,5 +51,5 @@ export function GifsSection({ term, limit, removeSearch }) {
 GifsSection.propTypes = {
   term: PropTypes.string.isRequired,
   limit: PropTypes.number.isRequired,
-  removeSearch: PropTypes.func
+  removeSearch: PropTypes.func.isRequired
 }
